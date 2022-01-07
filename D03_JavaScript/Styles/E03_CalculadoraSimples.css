@@ -1,0 +1,13 @@
+﻿.split {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+}
+
+.left {
+    left: 0;
+}
+
+.right {
+    right: 0;
+}

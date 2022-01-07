@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+
+<html lang="pt-pt">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Formulários</title>
+</head>
+
+<body>
+
+    <form action="/">
+        <fieldset>
+            <legend>Your Details and Inquery</legend>
+            <label>1. Name</label><br />
+            <br />
+            <input id="textName" type="text" /><br />
+            <label>2. City</label><br />
+            <br />
+            <select id="selectCity">
+                <option value="Gaia">Gaia</option>
+                <option value="Porto">Porto</option>
+                <option value="Aveiro">Aveiro</option>
+                <option value="Maia">Maia</option>
+            </select>
+            <br /><br />
+            <label>3. Phone</label><br />
+            <br />
+            <input id="textPhone" type="text" /><br />
+
+            <label>4. Email</label><br />
+            <br />
+            <input id="textEmail" type="text" /><br />
+
+            <label>5. Message</label><br />
+            <br />
+            <textarea id="textareaMessage" rows="3" cols="50"></textarea>
+
+        </fieldset>
+
+        <button id="buttonSubmit" type="submit" >Gravar </button>
+        <button id="buttonReset" type="reset" >Reset </button>
+        <button id="buttonButton" type="button" onclick="window.alert(`Hello!`);">JavaScript</button>
+    </form>
+
+</body>
+
+</html>

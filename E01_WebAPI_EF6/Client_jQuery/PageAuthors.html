@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="utf-8" />
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.min.js"></script>
+
+    <script>
+        $(document).ready
+            (
+                function () {
+
+                    var ulAuthors = $('#ulAuthors');
+                    $('#buttonGetAuthors').click(function () {
+                        $.ajax({
+                            type: 'GET',
+                            url: "/api/author/getauthors",
+                            dataType: 'json',
+                            success: function (data) {
+                                ulAuthors.empty();
+                                $.each(data, function (index, val) {
+                                    ulAuthors.append('<li> Author: ' + val.Id + ', ' + val.Name + '</li>');
+                                });
+                            }
+                        });
+                    });
+                    $('#buttonClearAuthors').click(function () {
+                        ulAuthors.empty();
+                    });
+
+
+
+                }
+            );
+
+    </script>
+
+    <title>Consuming Web API From jQuery</title>
+</head>
+<body>
+    <div>
+        <input id="buttonGetAuthors" type="button" value="Get All Authors" />
+        <input id="buttonClearAuthors" type="button" value="Clear Authors" />
+        <br />
+        <ul id="ulAuthors" />
+    </div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+﻿@import "ResetCSS.css";
+
+.container {
+    display:flex;
+    background-color: saddlebrown;
+}
+
+.container > div {
+    margin: 20px;
+    padding: 50px;
+    font-size: 2rem;
+}
+
+.div1 {
+    width:25%;
+    background-color: red;
+}
+
+.div2 {
+    width: 50%;
+    background-color: green;
+}
+
+.div3 {
+    width: 25%;
+    background-color: yellow;
+}

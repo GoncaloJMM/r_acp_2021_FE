@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+
+<html lang="pt-pt">
+
+<head>
+    <meta charset="utf-8" />
+    <title>FormPessoa</title>
+    <link href="../Styles/E02_FormPessoa.css" rel="stylesheet" />
+    <script src="../Scripts/E04_FormPessoa.js"></script>
+</head>
+
+<body onload="LoadForm();">
+    <form name="formPessoa">
+        <table>
+            <tr>
+                <td>Nome <span class="Required">*</span></td>
+                <td>
+                    <input maxlength="100"
+                           type="text"
+                           id="inputNome"
+                           size="50"
+                           onblur="ValidateNome();" />
+                </td>
+            </tr>
+
+            <tr>
+                <td>Data de nascimento<span class="Required">*</span></td>
+                <td>
+                    <input type="date"
+                           id="inputData"
+                           onblur="CalculateAge()"/>
+                    <span id="result"></span>
+                </td>
+
+            </tr>
+
+            <tr>
+                <td>E-mail <span class="Required">*</span></td>
+                <td>
+                    <input maxlength="100"
+                           type="text"
+                           id="inputMail"
+                           size="50"
+                           onblur="ValidateMail();" />
+                </td>
+            </tr>
+
+            <tr>
+                <td>Telefone <span class="Required">*</span></td>
+                <td>
+                    <input maxlength="100"
+                           type="text"
+                           id="inputTelefone"
+                           size="50"
+                           onblur="ValidateTelefone();" />
+                </td>
+            </tr>
+
+            <tr>
+                <td>NIF <span class="Required">*</span></td>
+                <td>
+                    <input maxlength="100"
+                           type="text"
+                           id="inputNif"
+                           size="50"
+                           onblur="ValidateNif();" />
+                </td>
+            </tr>
+        </table>
+
+        <button type="submit" onclick="GetDataBirth">Submit</button>
+        <h3 id="result"></h3>
+        <button type="reset">Reset</button>
+    </form>
+
+
+
+</body>
+
+</html>

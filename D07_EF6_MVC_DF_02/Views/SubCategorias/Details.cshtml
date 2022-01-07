@@ -1,0 +1,34 @@
+﻿@model D07_EF6_MVC_DF_02.Models.SubCategoria
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>SubCategoria</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.SubCategoria1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SubCategoria1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Categories.CategoryName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Categories.CategoryName)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.SubCategoriaID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
